@@ -1,4 +1,4 @@
-import { useMemo, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css"; 
 
 import { Pie } from 'react-chartjs-2';
@@ -109,7 +109,7 @@ function App() {
           </div>
           <div className="range-div w-[100%] py-5">
             <h1>Interest Rate</h1>
-            <h1 className="text-2xl font-medium">${interestValue}</h1>
+            <h1 className="text-2xl font-medium">{interestValue}%</h1>
             <div className="inner-div w-[100%]">
               <input type="range" name="" id="" value={interestValue} min={interestMin} max={interestMax} step={interestStep} className="slider w-[90%]" onChange={(e) => setInterestValue(Number(e.target.value))}/>
               <div className="min-max-range flex justify-between w-[90%]">
